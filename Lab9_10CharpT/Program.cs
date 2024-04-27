@@ -1,8 +1,38 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Lab#9  or  Lab#10");
-//  За бажанням студента для задач можна створювати консольний проект або WinForm
-// Бажано для задач лаб. робіт створити окремі класи
-// Виконання  виконати в стилі багатозаданості :
-//   Lab9T2  lab9task2 = new Lab9T2; lab9task2.Run();
-// При бажанні можна створити багатозадачний режим виконання задач.
+﻿namespace Lab9_10CharpT;
 
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Lab10 C# ");
+        Console.WriteLine("-------------------------------------------------------");
+        Console.WriteLine("1. Exceptions");
+        Console.WriteLine("2. ");
+        Console.WriteLine("-------------------------------------------------------");
+
+        try
+        {
+            Console.Write("Choose a task: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+            switch (choice)
+            {
+                case 1:
+                    TasksUsage.Program1();
+                    Console.WriteLine("");
+                    break;
+                case 2:
+                    TasksUsage.Program2();
+                    Console.WriteLine("");
+                    break;
+                default:
+                    Console.WriteLine("Task not found.");
+                    break;
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Error: " + e.Message);
+        }
+    }
+}
