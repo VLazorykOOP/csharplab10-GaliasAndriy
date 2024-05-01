@@ -7,7 +7,7 @@ internal class Program
         Console.WriteLine("Lab10 C# ");
         Console.WriteLine("-------------------------------------------------------");
         Console.WriteLine("1. Exceptions");
-        Console.WriteLine("2. ");
+        Console.WriteLine("2. Simulation of events. Student life");
         Console.WriteLine("-------------------------------------------------------");
 
         try

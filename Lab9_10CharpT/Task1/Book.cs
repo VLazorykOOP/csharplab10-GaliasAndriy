@@ -5,19 +5,17 @@ namespace Lab9_10CharpT {
     {
         public string Name { get; set; }
         public string Author { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         public string Publisher { get; set; }
         public int Age { get; set; }
-        public string ForAge { get; set; }
 
-        public Book(string name, string author, decimal price, string publisher, int age, string forAge)
+        public Book(string name, string author, double price, string publisher, int age)
         {
             Name = name;
             Author = author;
             Price = price;
             Publisher = publisher;
             Age = age;
-            ForAge = forAge;
         }
 
         public void DisplayInfo()
@@ -26,7 +24,6 @@ namespace Lab9_10CharpT {
             Console.WriteLine($"Book: {Name}");
             Console.ResetColor();
             Console.WriteLine($"Price: {Price}");
-
             Console.WriteLine($"Author: {Author}");
             Console.WriteLine($"Publisher: {Publisher}");
         }

@@ -23,7 +23,7 @@ namespace Lab9_10CharpT {
             Console.ResetColor();
             Console.WriteLine($"Price: {Price}");
             Console.WriteLine($"Manufacturer: {Manufacturer}");
-            Console.WriteLine($"Age Range: {Age}");
+            Console.WriteLine($"Age Range: {Age}+");
         }
 
         public bool IsType(string type)
