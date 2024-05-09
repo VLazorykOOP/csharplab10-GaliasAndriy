@@ -85,9 +85,7 @@ namespace Lab9_10CharpT
 
             try
             {
-                mathCourse.ChangeTime(new TimeSpan(7, 30, 0));
-                Console.WriteLine("\nNew student schedule after time change:");
-                student.DisplaySchedule();
+                mathCourse.Time = new TimeSpan(8, 30, 0);
             }
             catch (ArgumentOutOfRangeException ex)
             {

@@ -21,6 +21,8 @@ namespace Lab9_10CharpT
         public void AddCourse(Course course)
         {
             Courses.Add(course);
+            // Підписка на подію зміни часу курсу
+            course.TimeChanged += Course_TimeChanged;
         }
 
         public void DisplaySchedule()
@@ -29,6 +31,14 @@ namespace Lab9_10CharpT
             {
                 Console.WriteLine(course);
             }
+        }
+
+        private void Course_TimeChanged(object sender, TimeChangedEventArgs e)
+        {
+            // Оновлення розкладу після зміни часу курсу
+            Console.WriteLine($"Course time changed to {e.NewTime}.");
+            Console.WriteLine("\nUpdated schedule:");
+            DisplaySchedule();
         }
 
         public override string ToString()
